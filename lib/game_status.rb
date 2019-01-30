@@ -33,5 +33,6 @@ def won?(board)
     if full?(board)
       true
     elsif won?(board)
+      false
 end
 end
