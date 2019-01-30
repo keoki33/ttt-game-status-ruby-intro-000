@@ -24,6 +24,8 @@ def won?(board)
   end
 
   def full?(board)
-    position_taken?(board, index).all? do
+    board.all? do |char|
+      if char == "X" || "O"
+    end
   end
-end
+  
