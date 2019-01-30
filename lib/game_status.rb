@@ -28,3 +28,9 @@ def won?(board)
       char == "X" || char == "O"
     end
   end
+
+  def draw?(board)
+    if full?(board)
+      true
+    elsif won?(board)
+end
