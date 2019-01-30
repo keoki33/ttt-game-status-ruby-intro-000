@@ -39,5 +39,6 @@ end
 
 def winner?(board)
   if won?(board)
-  end
+    char = won?[0]
+      end
 end
