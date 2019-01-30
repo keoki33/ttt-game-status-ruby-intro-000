@@ -16,12 +16,9 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-WIN_COMBINATIONS.each do |win_index|
-  if win_index == [X, X, X] || [O, O, O]
-    won?(board)
-else
-  false
-
-end
-end
-end
+  WIN_COMBINATIONS.detect do |combo|
+      board[combo[0]] == board[combo[1]] &&
+      board[combo[1]] == board[combo[2]] &&
+      position_taken?(board, combo[0])
+    end
+  end
